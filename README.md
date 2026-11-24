@@ -2,7 +2,7 @@
 
 Compare European countries on eight official Eurostat indicators, in English or Portuguese. Every view is a shareable link.
 
-**Live:** _add your Vercel URL here_ · [![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/ci.yml)
+**Live: [eurostat-viewer.vercel.app](https://eurostat-viewer.vercel.app/)** · [![CI](https://github.com/suforozinho/eurostat-viewer/actions/workflows/ci.yml/badge.svg)](https://github.com/suforozinho/eurostat-viewer/actions/workflows/ci.yml)
 
 ![Renewable energy share for Portugal, Sweden, Germany, Poland and Ireland, 2010–2025](docs/screenshot.png)
 
@@ -58,7 +58,14 @@ browser ──► /en (static, CDN) ──► /api/series?indicator=… ──�
 
 - 193 unit and component tests (Vitest + Testing Library + axe-core), including every saved Eurostat fixture, empty and malformed responses, all error codes, URL parsing and translation parity.
 - Playwright: the main journey (pick an indicator, add two countries, switch language, reload from the URL), back button, lazy map, keyboard-only use, and axe scans with colour contrast for five views in light and dark mode. The e2e server runs with `EUROSTAT_FIXTURES=1`, so it answers from `fixtures/` and CI never calls Eurostat.
-- Lighthouse on a local production build: desktop 100 for performance, accessibility, best practices and SEO. Mobile (simulated slow 4G) 90–92 for performance, with 100 for the rest. _Re-run on the deployed site and update these numbers._
+- Lighthouse 12 on the [deployed site](https://eurostat-viewer.vercel.app/en?indicator=unemployment&countries=PT,ES,DE), three runs each (24 Nov 2026):
+
+  |         | Performance | Accessibility | Best practices | SEO |
+  | ------- | ----------- | ------------- | -------------- | --- |
+  | Desktop | 100         | 100           | 100            | 100 |
+  | Mobile  | 90–92       | 100           | 100            | 100 |
+
+  Mobile uses Lighthouse's simulated slow 4G and 4× CPU slowdown. The remaining cost is React hydration (about 350 ms of blocking time); layout shift is 0.
 
 ## What I would do next
 
