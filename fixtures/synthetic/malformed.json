@@ -1,0 +1,11 @@
+{
+  "version": "2.0",
+  "class": "dataset",
+  "label": "Malformed: id and size disagree, and time is missing from dimension",
+  "id": ["geo", "time"],
+  "size": [2],
+  "dimension": {
+    "geo": { "category": { "index": { "PT": 0, "ES": 1 } } }
+  },
+  "value": { "0": 1.5 }
+}

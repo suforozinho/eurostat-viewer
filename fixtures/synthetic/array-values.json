@@ -1,0 +1,27 @@
+{
+  "version": "2.0",
+  "class": "dataset",
+  "label": "Synthetic dataset with dense array values",
+  "updated": "2026-01-01T00:00:00+0100",
+  "id": ["unit", "geo", "time"],
+  "size": [1, 3, 2],
+  "dimension": {
+    "unit": {
+      "label": "Unit of measure",
+      "category": { "index": ["PC"], "label": { "PC": "Percentage" } }
+    },
+    "geo": {
+      "label": "Geopolitical entity",
+      "category": {
+        "index": ["PT", "ES", "MT"],
+        "label": { "PT": "Portugal", "ES": "Spain", "MT": "Malta" }
+      }
+    },
+    "time": {
+      "label": "Time",
+      "category": { "index": ["2023", "2024"] }
+    }
+  },
+  "value": [6.5, 6.4, 12.1, null, null, null],
+  "status": [null, "p", null, "c", null, null]
+}

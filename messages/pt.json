@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "title": "Europa em Números: compare países com dados do Eurostat",
+    "description": "Compare países europeus em desemprego, PIB per capita, energias renováveis, esperança de vida e mais, com dados oficiais do Eurostat. Cada vista é uma ligação que pode partilhar."
+  },
+  "header": {
+    "appName": "Europa em Números",
+    "tagline": "Compare países europeus com dados oficiais do Eurostat.",
+    "languageNav": "Idioma",
+    "switchTo": "English",
+    "switchToLabel": "View in English"
+  },
+  "skipLink": "Saltar para o gráfico",
+  "controls": {
+    "heading": "O que comparar",
+    "indicator": "Indicador",
+    "countries": "Países",
+    "countriesHint": "Até {max} países, mostrados no gráfico ao longo do tempo.",
+    "addCountry": "Adicionar um país",
+    "addPlaceholder": "Escolha um país…",
+    "remove": "Remover {country}",
+    "maxReached": "Está a comparar {max} países, o máximo. Remova um para adicionar outro.",
+    "noCountries": "Nenhum país selecionado.",
+    "selectedCount": "{count, plural, =0 {Nenhum país selecionado} one {# país selecionado} other {# países selecionados}}",
+    "period": "Período",
+    "from": "De",
+    "to": "Até",
+    "year": "Ano",
+    "noDataSuffix": "(sem dados)",
+    "previousYear": "Ano anterior",
+    "nextYear": "Ano seguinte",
+    "added": "{country} adicionado.",
+    "removed": "{country} removido."
+  },
+  "views": {
+    "label": "Vistas",
+    "trend": "Ao longo do tempo",
+    "ranking": "Classificação",
+    "map": "Mapa"
+  },
+  "display": {
+    "label": "Mostrar como",
+    "chart": "Gráfico",
+    "table": "Tabela"
+  },
+  "indicators": {
+    "unemployment": {
+      "name": "Taxa de desemprego",
+      "description": "Pessoas desempregadas em percentagem da população ativa, dos 15 aos 74 anos."
+    },
+    "gdp-per-capita": {
+      "name": "PIB per capita",
+      "description": "Produto interno bruto por habitante, em euros a preços correntes."
+    },
+    "renewable-energy": {
+      "name": "Quota de energias renováveis",
+      "description": "Peso das fontes renováveis no consumo final bruto de energia."
+    },
+    "life-expectancy": {
+      "name": "Esperança de vida à nascença",
+      "description": "Anos que um recém-nascido pode esperar viver se as taxas de mortalidade atuais se mantiverem."
+    },
+    "internet-use": {
+      "name": "Utilização da internet",
+      "description": "Percentagem de pessoas dos 16 aos 74 anos que usaram a internet nos últimos 3 meses."
+    },
+    "housing-cost": {
+      "name": "Sobrecarga com custos de habitação",
+      "description": "Percentagem de pessoas em agregados que gastam mais de 40% do rendimento disponível em habitação."
+    },
+    "inflation": {
+      "name": "Inflação (IHPC)",
+      "description": "Variação média anual dos preços no consumidor, medida pelo Índice Harmonizado de Preços no Consumidor."
+    },
+    "employment-rate": {
+      "name": "Taxa de emprego",
+      "description": "Pessoas empregadas em percentagem da população dos 20 aos 64 anos."
+    }
+  },
+  "status": {
+    "loading": "A carregar dados do Eurostat…",
+    "retry": "Tentar novamente",
+    "errors": {
+      "invalid_indicator": {
+        "title": "Este indicador não está disponível",
+        "body": "A ligação pode estar desatualizada. Escolha um indicador da lista."
+      },
+      "no_data": {
+        "title": "O Eurostat não tem dados para este indicador",
+        "body": "O Eurostat respondeu, mas sem valores. Experimente outro indicador."
+      },
+      "bad_request": {
+        "title": "O Eurostat não aceitou o pedido",
+        "body": "O conjunto de dados pode ter mudado. Experimente outro indicador ou volte mais tarde."
+      },
+      "not_found": {
+        "title": "O Eurostat não encontrou este conjunto de dados",
+        "body": "Pode ter mudado de nome ou sido descontinuado. Experimente outro indicador."
+      },
+      "too_large": {
+        "title": "O pedido era demasiado grande para o Eurostat",
+        "body": "Isto não devia acontecer. Experimente outro indicador ou volte mais tarde."
+      },
+      "upstream": {
+        "title": "O Eurostat está com problemas",
+        "body": "O serviço devolveu um erro. Normalmente é temporário, por isso tente novamente daqui a um minuto."
+      },
+      "timeout": {
+        "title": "O Eurostat está a demorar demasiado a responder",
+        "body": "O serviço pode estar sobrecarregado. Tente novamente daqui a um minuto."
+      },
+      "network": {
+        "title": "Não foi possível contactar o serviço de dados",
+        "body": "Verifique a sua ligação à internet e tente novamente."
+      },
+      "malformed": {
+        "title": "Os dados chegaram num formato inesperado",
+        "body": "O Eurostat pode ter alterado a resposta. Experimente outro indicador ou volte mais tarde."
+      }
+    },
+    "noCountries": "Adicione pelo menos um país para ver a evolução ao longo do tempo.",
+    "noDataForSelection": "Nenhum dos países selecionados tem dados entre {from} e {to}. Experimente um período mais longo ou outro país.",
+    "noDataForYear": "Nenhum país tem dados para {year}. Experimente outro ano.",
+    "missingCountries": "Sem dados neste período para: {countries}."
+  },
+  "chart": {
+    "trendTitle": "{indicator}, {from}–{to}",
+    "rankingTitle": "{indicator} por país, {year}",
+    "mapTitle": "{indicator} na Europa, {year}",
+    "trendSummary": "Gráfico de linhas que compara {countries} de {from} a {to}. A vista de tabela mostra todos os valores.",
+    "rankingSummary": "Gráfico de barras com {count} países em {year}, do valor mais alto para o mais baixo. Mais alto: {top}. Mais baixo: {bottom}.",
+    "selectedHint": "Os países que está a comparar estão marcados com ◆.",
+    "legend": "Legenda",
+    "noValue": "sem dados",
+    "selectedHintMap": "Os países que está a comparar têm um contorno escuro.",
+    "keyboardHint": "Use as setas para a esquerda e para a direita para ler os valores ano a ano.",
+    "rankingKeyboardHint": "Use as setas para cima e para baixo para ler cada país."
+  },
+  "map": {
+    "legendTitle": "Intervalos de valores (cada um com cerca de um quinto dos países)",
+    "noData": "Sem dados",
+    "notCovered": "Fora deste conjunto de dados",
+    "range": "{from} a {to}",
+    "summary": "Mapa de {count} países em {year}. Mais alto: {top}. Mais baixo: {bottom}. Mude para a tabela para ler todos os valores.",
+    "loading": "A carregar o mapa…"
+  },
+  "table": {
+    "trendCaption": "{indicator} por ano, {from}–{to}",
+    "rankingCaption": "{indicator} por país, {year}, do mais alto para o mais baixo",
+    "country": "País",
+    "year": "Ano",
+    "value": "Valor",
+    "rank": "Posição",
+    "flagsNote": "Os valores assinalados têm uma nota do Eurostat:"
+  },
+  "flags": {
+    "b": "quebra na série temporal",
+    "c": "confidencial",
+    "d": "definição diferente",
+    "e": "estimado",
+    "f": "previsão",
+    "n": "não significativo",
+    "p": "provisório",
+    "r": "revisto",
+    "s": "estimativa do Eurostat",
+    "u": "baixa fiabilidade",
+    "z": "não aplicável"
+  },
+  "source": {
+    "label": "Fonte:",
+    "eurostat": "Eurostat",
+    "dataset": "conjunto de dados {code}",
+    "datasetTitle": "Título no Eurostat",
+    "unit": "Unidade",
+    "updated": "Última atualização do Eurostat a {date}.",
+    "englishNote": "Os títulos dos conjuntos de dados e as unidades vêm do Eurostat e aparecem em inglês."
+  },
+  "footer": {
+    "credit": "Fonte: Eurostat. Dados reutilizados gratuitamente ao abrigo do aviso de direitos de autor do Eurostat. Alterações feitas aqui: cada conjunto de dados é filtrado para uma série por país, e os valores são reformatados e, no mapa, agrupados em intervalos. O Eurostat não é responsável por este site nem pela forma como os dados são apresentados.",
+    "creditLink": "Aviso de direitos de autor do Eurostat",
+    "boundaries": "Fronteiras do mapa: Natural Earth (domínio público). As fronteiras são apenas ilustrativas.",
+    "kosovo": "* Kosovo: Esta designação não prejudica as posições relativas ao estatuto e está em conformidade com a Resolução 1244/1999 do CSNU e com o parecer do TIJ sobre a declaração de independência do Kosovo.",
+    "about": "Um projeto independente, sem ligação ao Eurostat nem à Comissão Europeia.",
+    "code": "Código-fonte no GitHub"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "body": "Esta página não existe.",
+    "home": "Ir para o explorador"
+  }
+}

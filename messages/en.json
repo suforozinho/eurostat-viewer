@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "title": "Europe in Numbers: compare countries with Eurostat data",
+    "description": "Compare European countries on unemployment, GDP per capita, renewable energy, life expectancy and more, with official Eurostat data. Every view is a shareable link."
+  },
+  "header": {
+    "appName": "Europe in Numbers",
+    "tagline": "Compare European countries with official Eurostat data.",
+    "languageNav": "Language",
+    "switchTo": "Português",
+    "switchToLabel": "Ver em português"
+  },
+  "skipLink": "Skip to the chart",
+  "controls": {
+    "heading": "What to compare",
+    "indicator": "Indicator",
+    "countries": "Countries",
+    "countriesHint": "Up to {max} countries, shown in the chart over time.",
+    "addCountry": "Add a country",
+    "addPlaceholder": "Choose a country…",
+    "remove": "Remove {country}",
+    "maxReached": "You are comparing {max} countries, the maximum. Remove one to add another.",
+    "noCountries": "No countries selected.",
+    "selectedCount": "{count, plural, =0 {No countries selected} one {# country selected} other {# countries selected}}",
+    "period": "Period",
+    "from": "From",
+    "to": "To",
+    "year": "Year",
+    "noDataSuffix": "(no data)",
+    "previousYear": "Previous year",
+    "nextYear": "Next year",
+    "added": "{country} added.",
+    "removed": "{country} removed."
+  },
+  "views": {
+    "label": "Views",
+    "trend": "Over time",
+    "ranking": "Ranking",
+    "map": "Map"
+  },
+  "display": {
+    "label": "Show as",
+    "chart": "Chart",
+    "table": "Table"
+  },
+  "indicators": {
+    "unemployment": {
+      "name": "Unemployment rate",
+      "description": "Unemployed people as a share of the labour force, ages 15 to 74."
+    },
+    "gdp-per-capita": {
+      "name": "GDP per capita",
+      "description": "Gross domestic product per person, in euros at current prices."
+    },
+    "renewable-energy": {
+      "name": "Renewable energy share",
+      "description": "Share of renewable sources in gross final energy consumption."
+    },
+    "life-expectancy": {
+      "name": "Life expectancy at birth",
+      "description": "Years a newborn is expected to live if current mortality rates stay the same."
+    },
+    "internet-use": {
+      "name": "Internet use",
+      "description": "Share of people aged 16 to 74 who used the internet in the last 3 months."
+    },
+    "housing-cost": {
+      "name": "Housing cost overburden",
+      "description": "Share of people living in households that spend more than 40% of their disposable income on housing."
+    },
+    "inflation": {
+      "name": "Inflation (HICP)",
+      "description": "Annual average change in consumer prices, measured by the Harmonised Index of Consumer Prices."
+    },
+    "employment-rate": {
+      "name": "Employment rate",
+      "description": "Employed people as a share of the population aged 20 to 64."
+    }
+  },
+  "status": {
+    "loading": "Loading data from Eurostat…",
+    "retry": "Try again",
+    "errors": {
+      "invalid_indicator": {
+        "title": "This indicator is not available",
+        "body": "The link may be out of date. Pick an indicator from the list."
+      },
+      "no_data": {
+        "title": "Eurostat has no data for this indicator",
+        "body": "Eurostat answered, but without any values. Try another indicator."
+      },
+      "bad_request": {
+        "title": "Eurostat did not accept the request",
+        "body": "The dataset may have changed. Try another indicator, or come back later."
+      },
+      "not_found": {
+        "title": "Eurostat could not find this dataset",
+        "body": "It may have been renamed or retired. Try another indicator."
+      },
+      "too_large": {
+        "title": "The request was too large for Eurostat",
+        "body": "This should not happen. Try another indicator, or come back later."
+      },
+      "upstream": {
+        "title": "Eurostat is having problems",
+        "body": "Its service returned an error. This is usually temporary, so try again in a minute."
+      },
+      "timeout": {
+        "title": "Eurostat is taking too long to answer",
+        "body": "Its service may be busy. Try again in a minute."
+      },
+      "network": {
+        "title": "Could not reach the data service",
+        "body": "Check your internet connection and try again."
+      },
+      "malformed": {
+        "title": "The data came back in an unexpected format",
+        "body": "Eurostat may have changed its response. Try another indicator, or come back later."
+      }
+    },
+    "noCountries": "Add at least one country to see how it changed over time.",
+    "noDataForSelection": "None of the selected countries has data between {from} and {to}. Try a wider period or another country.",
+    "noDataForYear": "No country has data for {year}. Try another year.",
+    "missingCountries": "No data in this period for: {countries}."
+  },
+  "chart": {
+    "trendTitle": "{indicator}, {from}–{to}",
+    "rankingTitle": "{indicator} by country, {year}",
+    "mapTitle": "{indicator} across Europe, {year}",
+    "trendSummary": "Line chart comparing {countries} from {from} to {to}. The table view lists every value.",
+    "rankingSummary": "Bar chart of {count} countries in {year}, from highest to lowest. Highest: {top}. Lowest: {bottom}.",
+    "selectedHint": "The countries you are comparing are marked with ◆.",
+    "legend": "Legend",
+    "noValue": "no data",
+    "selectedHintMap": "The countries you are comparing have a dark outline.",
+    "keyboardHint": "Use the left and right arrow keys to read the values year by year.",
+    "rankingKeyboardHint": "Use the up and down arrow keys to read each country in turn."
+  },
+  "map": {
+    "legendTitle": "Value ranges (each holds about a fifth of the countries)",
+    "noData": "No data",
+    "notCovered": "Not covered by this dataset",
+    "range": "{from} to {to}",
+    "summary": "Map of {count} countries in {year}. Highest: {top}. Lowest: {bottom}. Switch to the table to read every value.",
+    "loading": "Loading map…"
+  },
+  "table": {
+    "trendCaption": "{indicator} by year, {from}–{to}",
+    "rankingCaption": "{indicator} by country, {year}, highest first",
+    "country": "Country",
+    "year": "Year",
+    "value": "Value",
+    "rank": "Rank",
+    "flagsNote": "Marked values carry a Eurostat note:"
+  },
+  "flags": {
+    "b": "break in time series",
+    "c": "confidential",
+    "d": "definition differs",
+    "e": "estimated",
+    "f": "forecast",
+    "n": "not significant",
+    "p": "provisional",
+    "r": "revised",
+    "s": "Eurostat estimate",
+    "u": "low reliability",
+    "z": "not applicable"
+  },
+  "source": {
+    "label": "Source:",
+    "eurostat": "Eurostat",
+    "dataset": "dataset {code}",
+    "datasetTitle": "Eurostat title",
+    "unit": "Unit",
+    "updated": "Last updated by Eurostat on {date}.",
+    "englishNote": "Dataset titles and units come from Eurostat and are shown in English."
+  },
+  "footer": {
+    "credit": "Source: Eurostat. Data reused free of charge under Eurostat's copyright notice. Changes made here: each dataset is filtered to one series per country, and values are reformatted and, for the map, grouped into ranges. Eurostat is not responsible for this site or for how the data is presented.",
+    "creditLink": "Eurostat copyright notice",
+    "boundaries": "Map boundaries: Natural Earth (public domain). Boundaries are for illustration only.",
+    "kosovo": "* Kosovo: This designation is without prejudice to positions on status, and is in line with UNSCR 1244/1999 and the ICJ Opinion on the Kosovo declaration of independence.",
+    "about": "An independent project, not affiliated with Eurostat or the European Commission.",
+    "code": "Source code on GitHub"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "This page does not exist.",
+    "home": "Go to the explorer"
+  }
+}

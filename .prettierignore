@@ -1,0 +1,7 @@
+.next
+node_modules
+fixtures
+src/components/map/europe-paths.json
+playwright-report
+test-results
+package-lock.json
