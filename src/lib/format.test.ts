@@ -28,7 +28,8 @@ describe("formatValue", () => {
 
 describe("formatAxisValue", () => {
   it("uses compact euros", () => {
-    expect(plain(formatAxisValue(40000, "eur", "en-GB"))).toBe("€40K");
+    // The thousands suffix is "K" or "k" depending on the Node/ICU version.
+    expect(plain(formatAxisValue(40000, "eur", "en-GB"))).toMatch(/^€40k$/i);
   });
 });
 
