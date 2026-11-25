@@ -12,7 +12,12 @@ export interface FetchOptions {
   timeoutMs?: number;
 }
 
-const DEFAULT_TIMEOUT_MS = 15_000;
+/**
+ * Usually Eurostat answers in under 3 seconds, but the first request after it
+ * publishes new data can take 45 seconds or more while it rebuilds its cache.
+ * Wait long enough for that, just inside the route's 60-second limit.
+ */
+const DEFAULT_TIMEOUT_MS = 55_000;
 
 /**
  * Fetches one Eurostat dataset and validates it as JSON-stat.

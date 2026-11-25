@@ -1,25 +1,42 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import type { SeriesErrorCode } from "@/lib/eurostat/errors";
 
-/** Placeholder with the chart's footprint, so nothing jumps when data arrives. */
-export function LoadingState({ label }: { label?: string }) {
+/** True once `ms` milliseconds have passed since the component mounted. */
+function useElapsed(ms: number | undefined): boolean {
+  const [elapsed, setElapsed] = useState(false);
+  useEffect(() => {
+    if (ms === undefined) return;
+    const timer = setTimeout(() => setElapsed(true), ms);
+    return () => clearTimeout(timer);
+  }, [ms]);
+  return elapsed;
+}
+
+/**
+ * Placeholder with the chart's footprint, so nothing jumps when data arrives.
+ * With `slowAfterMs`, it explains the wait if loading takes longer than that.
+ */
+export function LoadingState({ label, slowAfterMs }: { label?: string; slowAfterMs?: number }) {
   const t = useTranslations("status");
+  const slow = useElapsed(slowAfterMs);
+  const text = slow ? t("slow") : (label ?? t("loading"));
   return (
     <div
       role="status"
       aria-live="polite"
       className="border-line bg-surface flex h-[380px] flex-col justify-end gap-3 rounded-lg border p-4"
     >
-      <span className="sr-only">{label ?? t("loading")}</span>
+      <span className="sr-only">{text}</span>
       <div aria-hidden="true" className="flex h-full animate-pulse items-end gap-2">
         {[40, 55, 48, 62, 58, 70, 66, 74, 69, 80, 76, 85].map((h, i) => (
           <div key={i} className="bg-surface-2 flex-1 rounded-t" style={{ height: `${h}%` }} />
         ))}
       </div>
       <p aria-hidden="true" className="text-ink-3 text-sm">
-        {label ?? t("loading")}
+        {text}
       </p>
     </div>
   );

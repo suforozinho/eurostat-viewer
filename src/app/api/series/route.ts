@@ -3,6 +3,9 @@ import { isIndicatorId } from "@/lib/indicators";
 import { httpStatusFor } from "@/lib/eurostat/errors";
 import { getSeries } from "@/lib/series/get-series";
 
+/** Room for a slow first Eurostat request after a data release (see client.ts). */
+export const maxDuration = 60;
+
 /**
  * GET /api/series?indicator=unemployment
  *

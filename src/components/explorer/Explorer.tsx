@@ -34,6 +34,9 @@ import { RankingChart } from "@/components/charts/RankingChart";
 import { RankingTable, TrendTable } from "@/components/charts/DataTables";
 import { SourceNote } from "./SourceNote";
 
+/** After this long, the loading state says that Eurostat is being slow. */
+const SLOW_AFTER_MS = 8000;
+
 function MapLoading() {
   const t = useTranslations("map");
   return <LoadingState label={t("loading")} />;
@@ -131,7 +134,7 @@ export function Explorer() {
         <SnapshotView {...ctx} map={state.view === "map"} />
       );
   } else {
-    content = <LoadingState />;
+    content = <LoadingState slowAfterMs={SLOW_AFTER_MS} />;
   }
 
   return (

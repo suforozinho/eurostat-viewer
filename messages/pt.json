@@ -121,7 +121,8 @@
     "noCountries": "Adicione pelo menos um país para ver a evolução ao longo do tempo.",
     "noDataForSelection": "Nenhum dos países selecionados tem dados entre {from} e {to}. Experimente um período mais longo ou outro país.",
     "noDataForYear": "Nenhum país tem dados para {year}. Experimente outro ano.",
-    "missingCountries": "Sem dados neste período para: {countries}."
+    "missingCountries": "Sem dados neste período para: {countries}.",
+    "slow": "O Eurostat está a demorar mais do que o habitual. Logo depois de publicar dados novos, o primeiro pedido pode demorar até um minuto. Ainda à espera…"
   },
   "chart": {
     "trendTitle": "{indicator}, {from}–{to}",
